@@ -8,19 +8,30 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <div class="content-wrapper">
+<div class="nav-container">
+  <div class="nav-brand">
+  <img src="images/logo.svg" alt="Sneakers Logo">
+  </div>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <ul class="nav">
+  <li class="nav-item"><a class="nav-link">Collections</a></li>
+  <li class="nav-item"><a class="nav-link">Men</a></li> 
+  <li class="nav-item"><a class="nav-link">Women</a></li>
+  <li class="nav-item"><a class="nav-link">About</a></li>
+  <li class="nav-item"><a class="nav-link">Contact</a></li>
+</ul>
+
+<div class="right-row">
+  <img src="images/icon-cart.svg" id="cart-icon" alt="cart">
+  <span class='badge badge-warning' id='lblCartCount'> 5 </span>
+  <img src="images/image-avatar.png" id="customer-image" alt="customer image">
+</div>
+</div>
+
+
 
   Sneaker Company
 
@@ -36,9 +47,6 @@
   0
   Add to cart
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 
 
