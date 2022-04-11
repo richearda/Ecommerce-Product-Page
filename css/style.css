@@ -3,7 +3,6 @@
 
 * {
    box-sizing: border-box; 
-   
 }
 
 body {
@@ -11,11 +10,10 @@ body {
     font-size:16px;
 }
 .content-wrapper {
-border: 2px solid green;
 width: 80%;
 margin: auto;
 }
-.nav-container {
+nav {
     width: 100%;
     height:90px;
     background-color: hsl(0, 0%, 100%);
@@ -31,12 +29,15 @@ margin: auto;
     height:30%;
     margin-left:50px;
 }
-.nav-brand img {
-    width:100%;
-    height:100%;
+#nav-logo {
+    position:relative;
+   width: 150px;
+   height: 50px;
+   top:15%;
+   left:30px;
 }
 
-.nav {
+.nav-ul {
     list-style-type: none;
     position:relative;
     display:flex;
@@ -65,12 +66,10 @@ margin: auto;
 }
 
 .right-row img {
-    position:relative; 
     margin-right:20px;
 }
 
 #cart-icon {
-    
     top:20%;
     height:20px;
     width:20px;
@@ -89,18 +88,179 @@ margin: auto;
     border-radius: 50%;
 }
 
-#lblCartCount {
-    font-size: 14px;
-    background: #faa403;
-    color: #fff;
-    padding: 2px 5px;
-
-    margin-left: -30px;
+#cartCount:before{
+    content:attr(data-num);
+    position:absolute;
+    width:17px;
+    height:17px;
+    border-radius:50%;
+    background:orangered;
+    color:white;
+    text-align:center;
+    line-height: 17px;
+    font-size:11px;
+    transform:translate(13px,5px);
 }
-.badge {
-  padding-left: 9px;
-  padding-right: 9px;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  border-radius: 50%;
+#cartCount {
+    top:50%;
+}
+.flex {
+
+    display:flex;
+  
+}
+.flex > div {
+    flex:1;
+    margin: 30px;
+    
+}
+
+section {
+    padding-top:60px;
+}
+
+.productSlides {
+    display:none; 
+}
+.productSlides > img {
+    border-radius:5%;
+}
+
+.cursor {
+    cursor:pointer;
+}
+.row {
+    margin:0 auto;
+    display: flex;
+    width:100%;
+    justify-content: center;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.column {
+    margin:10px;
+    float: left;
+    width: 16.66%;
+  }
+.column:not(last-child)
+{
+    margin-right: 20px;
+}
+.column:first-child {
+    margin-left: 10px;
+}
+
+.thumbnail {
+    border-radius: 20%;
+}
+
+.thumbnail:hover {
+    opacity: 0.6;
+    border: 3px solid orangered;
+}
+
+
+.lightbox {
+    position:relative;
+    border:2px solid yellow;
+}
+.product-info {
+    padding-top: 50px;
+}
+.row-text {
+    padding:0;
+}
+.sneaker-company {
+    display:flex;
+    height: 50px;
+    align-items:flex-end;
+    text-transform: uppercase;
+    font-size:16px;
+    letter-spacing: 0.1rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: bold;
+    color:orange;
+}
+
+.row-text > h1 {
+    padding-top:20px;
+    font-size:38px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color:hsl(228, 3%, 29%);
+    margin-top:0;
+    letter-spacing: 0.1rem;
+    line-height:2.8rem;
+}
+
+.product-description {
+    font-size:16px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(219, 9%, 45%);
+}
+
+.row-price {
+    display:flex;
+    margin-bottom: 10px;
+}
+
+.discounted-price {
+    font-size:22px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(0, 0%, 2%);
+    font-weight: 700;
+    margin-right:20px;
+}
+
+.percent-discount {
+background-color: rgb(250, 218, 158);
+color:orange;
+font-size: 16px;
+font-weight: 700;
+font-family: 'Kumbh Sans', sans-serif;
+padding:3px;
+width:40px;
+border-radius:15%;
+}
+
+#old-price {
+   font-size: 14px;
+   font-family: 'Kumbh Sans', sans-serif;
+   font-weight: bold;
+   color: hsl(225, 2%, 60%);
+    text-decoration: line-through;
+}
+
+.row-btn-group {
+    margin-top: 50px;
+    display:flex;
+    font-size: 22px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: bold;
+    height:40px;
+}
+
+#btn-plus, #btn-minus {
+    width: 10%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-weight:bold;
+    font-size: 20px;
+}
+#btn-addtocart {
+    margin-left: 40px;
+    width:30%;
+    background-color: orange;
+    font-size:16px;
+    font-weight: bold;
+    color:white;
+}
+.count {
+    padding: 3px;
 }

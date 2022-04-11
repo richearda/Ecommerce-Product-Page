@@ -10,46 +10,97 @@
 
 </head>
 <body>
-  <div class="content-wrapper">
-<div class="nav-container">
-  <div class="nav-brand">
-  <img src="images/logo.svg" alt="Sneakers Logo">
-  </div>
-
-  <ul class="nav">
-  <li class="nav-item"><a class="nav-link">Collections</a></li>
-  <li class="nav-item"><a class="nav-link">Men</a></li> 
-  <li class="nav-item"><a class="nav-link">Women</a></li>
-  <li class="nav-item"><a class="nav-link">About</a></li>
-  <li class="nav-item"><a class="nav-link">Contact</a></li>
-</ul>
-
-<div class="right-row">
-  <img src="images/icon-cart.svg" id="cart-icon" alt="cart">
-  <span class='badge badge-warning' id='lblCartCount'> 5 </span>
-  <img src="images/image-avatar.png" id="customer-image" alt="customer image">
-</div>
-</div>
-
-
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
   
-  </div>
+<div class="content-wrapper">
+  <header>
+    <nav>
+      
+      <img src="images/logo.svg" id="nav-logo" alt="Sneakers Logo">
+      
 
+      <ul class="nav-ul">
+      <li class="nav-item"><a class="nav-link">Collections</a></li>
+      <li class="nav-item"><a class="nav-link">Men</a></li> 
+      <li class="nav-item"><a class="nav-link">Women</a></li>
+      <li class="nav-item"><a class="nav-link">About</a></li>
+      <li class="nav-item"><a class="nav-link">Contact</a></li>
+    </ul>
 
+    <div class="right-row">
+      <span class='badge' id='cartCount' data-num="5">
+          <img src="images/icon-cart.svg" id="cart-icon" alt="cart">
+      </span>
+      <img src="images/image-avatar.png" id="customer-image" alt="customer image">
+    </div>
+    </nav>
+  </header> 
+
+  <section>
+    <div class="flex">
+      <div class="light-box">
+        <div class="productSlides">
+            <img src="images/image-product-1.jpg" style="width:100%">
+        </div>
+      
+        <div class="productSlides">
+         
+            <img src="images/image-product-2.jpg" style="width:100%">
+        </div>
+      
+        <div class="productSlides">
+            <img src="images/image-product-3.jpg" style="width:100%">
+        </div>
+      
+        <div class="productSlides">
+            <img src="images/image-product-4.jpg" style="width:100%">
+        </div>
+      
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="thumbnail cursor" src="images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" style="width:100%"  alt="Product 1">
+          </div>
+          <div class="column">
+            <img class="thumbnail cursor" src="images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" style="width:100%"  alt="Product 2">
+          </div>
+          <div class="column">
+            <img class="thumbnail cursor" src="images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" style="width:100%"  alt="Product 3">
+          </div>
+          <div class="column">
+            <img class="thumbnail cursor" src="images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" style="width:100%"  alt="Product 4">
+          </div>
+        </div>
+
+      </div>
+      <div class="product-info">
+        <div class="row-text sneaker-company">
+       Sneaker Company
+        </div>
+        <div class="row-text">
+          <h1>
+        Fall Limited Edition Sneakers
+          </h1>
+        </div>
+        <div class="row-text">
+        <p class="product-description">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        </div>
+        <div class="row-price">
+        <span class="discounted-price">$125.00</span>
+        <span class="percent-discount">50%</span>
+        </div>
+        <span id="old-price">$250.00</span>
+        <div class="row-btn-group">
+        <input type="button" value="-" id="btn-minus"><span class="count">0</span><input type="button" id="btn-plus" value="+">
+        <input type="button" id="btn-addtocart" value="Add to cart">
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
   <script src="js/script.js"></script>
 </body>
 </html>
