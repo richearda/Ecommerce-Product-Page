@@ -75,6 +75,44 @@ nav {
 #cart-icon:hover {
     cursor:pointer;
 }
+.cart {
+    position: absolute;
+    top: 13%;
+    right:8%;
+    width: 18rem;
+    z-index: 1;
+    background-color: white;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 1rem 1rem 1rem rgb(0 0 0 / 10%), 0 1rem 2rem 1rem rgb(0 0 0 / 10%);
+    box-shadow: 0 1rem 1rem 1rem rgb(0 0 0 / 10%), 0 1rem 2rem 1rem rgb(0 0 0 / 10%);
+}
+.cart-header {
+    border-bottom: 1px solid #b6bcc8;
+    padding: 1rem 1rem;
+    font-size: 1.3rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+    
+}
+.msg-empty{
+    color: #68707d;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 3rem 0;
+}
+.checkout{
+    background-color: #ff7d1a;
+    color: white;
+    text-align: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
 
 #customer-image {
    
