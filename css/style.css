@@ -16,42 +16,38 @@ margin: auto;
 nav {
     width: 100%;
     height:90px;
+    padding-top:0;
     background-color: hsl(0, 0%, 100%);
-    box-shadow: 0px 0px 2px 0px hsl(240, 0%, 60%);
+    box-shadow:0px 5px 5px -8px hsl(0, 0%, 6%);
     display:flex;
-    left:10%;
-    right:10%;
 }
-.nav-brand {
-    position:relative;
-    top: 30px;
-    width: 150px;
-    height:30%;
-    margin-left:50px;
+.burger-menu {
+    display:none;
 }
 #nav-logo {
-    position:relative;
-   width: 150px;
-   height: 50px;
-   top:15%;
-   left:30px;
+   position:relative;
+   width: 10%;
+   height: 30px;
+   top:30%;
+   margin-right:30px;
 }
-
 .nav-ul {
     list-style-type: none;
-    position:relative;
     display:flex;
-    top:22%;
+    justify-content: space-between;
     font-family: 'Kumbh Sans', sans-serif;
+    height:90px;
+    margin-top:0;
+    width: 50%;
+    padding:0;
 }
 .nav-item {
-    margin-right:30px;
-    height:95%;
+    margin:0;
+    padding:0;
 }
 .nav-item:hover {
     border-bottom: 3px solid orange;    
 }
-
 .nav-item a {
     color: hsl(219, 9%, 45%);   
 }
@@ -59,21 +55,27 @@ nav {
     cursor: pointer;
     color: hsl(0, 0%, 0%);   
 }
+.nav-link {
+    top:40%;
+    position:relative;
+}
 
 .right-row {
-    width: 250px;
-    margin-left:200px;
+    width: 40%;
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
 }
-
-.right-row img {
-    margin-right:20px;
-}
-
 #cart-icon {
     top:20%;
     height:20px;
     width:20px;
+    margin-right:15px;
 }
+#cart-icon:hover {
+    cursor:pointer;
+}
+
 #customer-image {
    
     top:30%;
@@ -94,12 +96,12 @@ nav {
     width:17px;
     height:17px;
     border-radius:50%;
-    background:orangered;
+    background:orange;
     color:white;
     text-align:center;
     line-height: 17px;
     font-size:11px;
-    transform:translate(13px,5px);
+    transform:translate(15px,-5px);
 }
 #cartCount {
     top:50%;
@@ -129,11 +131,12 @@ section {
 .cursor {
     cursor:pointer;
 }
-.row {
-    margin:0 auto;
+.row {  
     display: flex;
     width:100%;
-    justify-content: center;
+    justify-content:space-evenly;
+    padding:0;
+    margin:0;
 }
 .row:after {
     content: "";
@@ -141,27 +144,27 @@ section {
     clear: both;
   }
 .column {
-    margin:10px;
+    margin-top:10px;
     float: left;
-    width: 16.66%;
+    width: 25%;
+    margin-top: 20px;
   }
-.column:not(last-child)
-{
-    margin-right: 20px;
+
+.column:not(:first-child) {
+    margin-left:30px;
 }
-.column:first-child {
-    margin-left: 10px;
-}
+  
+
 
 .thumbnail {
     border-radius: 20%;
+    
 }
 
 .thumbnail:hover {
     opacity: 0.6;
     border: 3px solid orangered;
 }
-
 
 .lightbox {
     position:relative;
@@ -241,9 +244,17 @@ border-radius:15%;
     font-weight: bold;
     height:40px;
 }
+.btn-counter {
+    margin-right:5px;
+    width:25%;
+    display:flex;
+    background-color:hsl(240, 3%, 94%);
+    border-radius:8%;
+    padding-top:2px;
+}
 
 #btn-plus, #btn-minus {
-    width: 10%;
+    width: 20%;
     background-color: transparent;
     background-repeat: no-repeat;
     border: none;
@@ -252,15 +263,26 @@ border-radius:15%;
     outline: none;
     font-weight:bold;
     font-size: 20px;
+    flex:1;
+    color:hsl(26, 100%, 55%);
 }
 #btn-addtocart {
     margin-left: 40px;
-    width:30%;
-    background-color: orange;
-    font-size:16px;
+    width:40%;
+    background-color: hsl(26, 100%, 55%);
+    font-size:14px;
     font-weight: bold;
     color:white;
+    border-radius: 8%;
+    border:0px;
+    box-shadow:0px 10px 10px -8px hsl(26, 100%, 55%);
+}
+#btn-addtocart:hover{
+    cursor:pointer;
 }
 .count {
-    padding: 3px;
+    padding:8px;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+    
 }

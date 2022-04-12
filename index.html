@@ -6,6 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <title>Frontend Mentor | E-commerce product page</title>
 
 </head>
@@ -14,24 +16,23 @@
 <div class="content-wrapper">
   <header>
     <nav>
-      
+      <img src="images/icon-menu.svg" alt="Menu" class="burger-menu">
       <img src="images/logo.svg" id="nav-logo" alt="Sneakers Logo">
       
-
-      <ul class="nav-ul">
-      <li class="nav-item"><a class="nav-link">Collections</a></li>
-      <li class="nav-item"><a class="nav-link">Men</a></li> 
-      <li class="nav-item"><a class="nav-link">Women</a></li>
-      <li class="nav-item"><a class="nav-link">About</a></li>
-      <li class="nav-item"><a class="nav-link">Contact</a></li>
-    </ul>
-
-    <div class="right-row">
-      <span class='badge' id='cartCount' data-num="5">
-          <img src="images/icon-cart.svg" id="cart-icon" alt="cart">
-      </span>
-      <img src="images/image-avatar.png" id="customer-image" alt="customer image">
-    </div>
+        <ul class="nav-ul">
+          <li class="nav-item"><a class="nav-link">Collections</a></li>
+          <li class="nav-item"><a class="nav-link">Men</a></li> 
+          <li class="nav-item"><a class="nav-link">Women</a></li>
+          <li class="nav-item"><a class="nav-link">About</a></li>
+          <li class="nav-item"><a class="nav-link">Contact</a></li> 
+        </ul>
+      
+      <div class="right-row">
+        <span class='badge' id='cartCount' data-num="5">
+            <img src="images/icon-cart.svg" id="cart-icon" alt="cart">
+        </span>
+        <img src="images/image-avatar.png" id="customer-image" alt="customer image">
+      </div>
     </nav>
   </header> 
 
@@ -93,8 +94,10 @@
         </div>
         <span id="old-price">$250.00</span>
         <div class="row-btn-group">
-        <input type="button" value="-" id="btn-minus"><span class="count">0</span><input type="button" id="btn-plus" value="+">
-        <input type="button" id="btn-addtocart" value="Add to cart">
+        <div class="btn-counter">
+        <button id="btn-minus">-</button><span class="count">0</span><button id="btn-plus" onclick="incrementQty();">+</button>
+        </div>
+        <button id="btn-addtocart"><i class="fa-solid fa-cart-plus" style="margin-right:5px;"></i>Add to cart</button>
         </div>
       </div>
 
