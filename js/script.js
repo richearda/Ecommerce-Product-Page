@@ -1,4 +1,19 @@
+//Variables
+const btnPlus = document.querySelector('#btn-plus');
+const btnMinus = document.querySelector('#btn-minus');
+const productQtyCount = document.querySelector('.count');
+let productCount = 1;
+let productPrice = 250.0;
+let productDiscount = 0.5;
+
 let slideIndex = 1;
+
+//Event Listeners
+btnPlus.addEventListener('click', incrementProductQty);
+btnMinus.addEventListener('click', decrementProductQty);
+
+
+//Functions
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -23,5 +38,21 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+function incrementProductQty() {
+  //console.log(productCounterValue);
+  setProductQtyCount(1);
+}
+
+function decrementProductQty() {
+  setProductQtyCount(-1);
+}
+
+function setProductQtyCount(value) {
+  if ((productCount + value) > 0) {
+      productCount += value;
+      productQtyCount.innerHTML = productCount;
+  }
+  //console.log(value);
 }
