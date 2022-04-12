@@ -2,6 +2,8 @@
 const btnPlus = document.querySelector('#btn-plus');
 const btnMinus = document.querySelector('#btn-minus');
 const productQtyCount = document.querySelector('.count');
+const cart = document.querySelector('.cart');
+const cartIcon = document.querySelector('#cart-icon');
 let productCount = 1;
 let productPrice = 250.0;
 let productDiscount = 0.5;
@@ -11,6 +13,7 @@ let slideIndex = 1;
 //Event Listeners
 btnPlus.addEventListener('click', incrementProductQty);
 btnMinus.addEventListener('click', decrementProductQty);
+cartIcon.addEventListener('click', toggleCart);
 
 
 //Functions
@@ -55,4 +58,12 @@ function setProductQtyCount(value) {
       productQtyCount.innerHTML = productCount;
   }
   //console.log(value);
+}
+
+function toggleCart(){
+  if (cart.style.display === "none") {
+    cart.style.display = "block";
+  } else {
+    cart.style.display = "none";
+  }
 }
