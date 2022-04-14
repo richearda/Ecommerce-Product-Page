@@ -1,326 +1,412 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;402;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;402;700&display=swap");
 
 * {
-   box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
-    background-color:hsl(0, 0%, 100%);
-    font-size:16px;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 16px;
 }
 .content-wrapper {
-width: 80%;
-margin: auto;
+  width: 80%;
+  margin: auto;
 }
 nav {
-    width: 100%;
-    height:90px;
-    padding-top:0;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow:0px 5px 5px -8px hsl(0, 0%, 6%);
-    display:flex;
+  width: 100%;
+  height: 90px;
+  padding-top: 0;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 5px 5px -8px hsl(0, 0%, 6%);
+  display: flex;
 }
 .burger-menu {
-    display:none;
+  display: none;
 }
 #nav-logo {
-   position:relative;
-   width: 10%;
-   height: 30px;
-   top:30%;
-   margin-right:30px;
+  position: relative;
+  width: 10%;
+  height: 30px;
+  top: 30%;
+  margin-right: 30px;
 }
 .nav-ul {
-    list-style-type: none;
-    display:flex;
-    justify-content: space-between;
-    font-family: 'Kumbh Sans', sans-serif;
-    height:90px;
-    margin-top:0;
-    width: 50%;
-    padding:0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Kumbh Sans", sans-serif;
+  height: 90px;
+  margin-top: 0;
+  width: 50%;
+  padding: 0;
 }
 .nav-item {
-    margin:0;
-    padding:0;
+  margin: 0;
+  padding: 0;
 }
 .nav-item:hover {
-    border-bottom: 3px solid orange;    
+  border-bottom: 3px solid orange;
 }
 .nav-item a {
-    color: hsl(219, 9%, 45%);   
+  color: hsl(219, 9%, 45%);
 }
 .nav-item a:hover {
-    cursor: pointer;
-    color: hsl(0, 0%, 0%);   
+  cursor: pointer;
+  color: hsl(0, 0%, 0%);
 }
 .nav-link {
-    top:40%;
-    position:relative;
+  top: 40%;
+  position: relative;
 }
 
 .right-row {
-    width: 40%;
-    display:flex;
-    align-items:center;
-    justify-content: flex-end;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 #cart-icon {
-    top:20%;
-    height:20px;
-    width:20px;
-    margin-right:15px;
+  top: 20%;
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
 }
 #cart-icon:hover {
-    cursor:pointer;
+  cursor: pointer;
 }
 .cart {
-    position: absolute;
-    top: 13%;
-    right:8%;
-    width: 18rem;
-    z-index: 1;
-    background-color: white;
-    border-radius: 1rem;
-    -webkit-box-shadow: 0 1rem 1rem 1rem rgb(0 0 0 / 10%), 0 1rem 2rem 1rem rgb(0 0 0 / 10%);
-    box-shadow: 0 1rem 1rem 1rem rgb(0 0 0 / 10%), 0 1rem 2rem 1rem rgb(0 0 0 / 10%);
+  position: absolute;
+  top: 13%;
+  right: 8%;
+  width: 26rem;
+  z-index: 1;
+  background-color: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 1rem 1rem 1rem rgb(0 0 0 / 10%),
+    0 1rem 2rem 1rem rgb(0 0 0 / 10%);
+  box-shadow: 0 1rem 1rem 1rem rgb(0 0 0 / 10%),
+    0 1rem 2rem 1rem rgb(0 0 0 / 10%);
+  display: none;
 }
 .cart-header {
-    border-bottom: 1px solid #b6bcc8;
-    padding: 1rem 1rem;
-    font-size: 1.3rem;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-weight: 700;
-    
+  border-bottom: 1px solid #b6bcc8;
+  padding: 1rem 1rem;
+  font-size: 1.3rem;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
 }
-.msg-empty{
-    color: #68707d;
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: 700;
-    padding: 3rem 0;
+.products-in-cart {
+display:none;
+height: 80px;
+margin:20px;
+display:flex;
+
 }
-.checkout{
-    background-color: #ff7d1a;
-    color: white;
-    text-align: center;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 2rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    cursor: pointer;
+#purchased-product{
+margin:4px;
+border-radius:20%;
+}
+.product-purchased-info {
+    width:18rem;
+    margin-right:5px;
+    font-size:18px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#product-purchased-name, .product-total {
+    margin:0;
+    padding:3px;
+    font-size:18px;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight:700;
+    color:#b6bcc8;
+}
+.purchasedTotal{
+    color:black !important;
+    font-weight: bold !important;
+}
+.remove-product-button{
+   width:15px;
+   height:15px;
+   display:flex;
+   margin-right: 5px;
+   align-self: center;
+}
+
+
+.msg-empty {
+  color: #68707d;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 3rem 0;
+}
+.checkout {
+  background-color: #ff7d1a;
+  color: white;
+  text-align: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 
 #customer-image {
-   
-    top:30%;
-    height:40px;
-    width:40px;
-    margin-left:20px;
+  top: 30%;
+  height: 40px;
+  width: 40px;
+  margin-left: 20px;
 }
 
 #customer-image:hover {
-    border:2px solid orange;
-    cursor:pointer;
-    border-radius: 50%;
+  border: 2px solid orange;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
-#cartCount:before{
-    content:attr(data-num);
-    position:absolute;
-    width:17px;
-    height:17px;
-    border-radius:50%;
-    background:orange;
-    color:white;
-    text-align:center;
-    line-height: 17px;
-    font-size:11px;
-    transform:translate(15px,-5px);
+#cartCount:before {
+  content: attr(data-num);
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: orange;
+  color: white;
+  text-align: center;
+  line-height: 17px;
+  font-size: 11px;
+  transform: translate(15px, -5px);
 }
 #cartCount {
-    top:50%;
+  top: 50%;
 }
 .flex {
-
-    display:flex;
-  
+  display: flex;
 }
 .flex > div {
-    flex:1;
-    margin: 30px;
-    
+  flex: 1;
+  margin: 30px;
 }
 
 section {
-    padding-top:60px;
+  padding-top: 60px;
 }
 
 .productSlides {
-    display:none; 
+  display: none;
 }
 .productSlides > img {
-    border-radius:5%;
+  border-radius: 5%;
 }
 
 .cursor {
-    cursor:pointer;
+  cursor: pointer;
 }
-.row {  
-    display: flex;
-    width:100%;
-    justify-content:space-evenly;
-    padding:0;
-    margin:0;
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
 }
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  content: "";
+  display: table;
+  clear: both;
+}
 .column {
-    margin-top:10px;
-    float: left;
-    width: 25%;
-    margin-top: 20px;
-  }
+  margin-top: 10px;
+  float: left;
+  width: 25%;
+  margin-top: 20px;
+}
 
 .column:not(:first-child) {
-    margin-left:30px;
+  margin-left: 30px;
 }
-  
 
-
-.thumbnail {
-    border-radius: 20%;
-    
+.thumbnail,
+.thumbnail-modal {
+  border-radius: 20%;
 }
 
 .thumbnail:hover {
-    opacity: 0.6;
-    border: 3px solid orangered;
+  opacity: 0.6;
+  border: 3px solid orangered;
 }
 
 .lightbox {
-    position:relative;
-    border:2px solid yellow;
+  position: relative;
+  border: 2px solid yellow;
 }
 .product-info {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 .row-text {
-    padding:0;
+  padding: 0;
 }
 .sneaker-company {
-    display:flex;
-    height: 50px;
-    align-items:flex-end;
-    text-transform: uppercase;
-    font-size:16px;
-    letter-spacing: 0.1rem;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-weight: bold;
-    color:orange;
+  display: flex;
+  height: 50px;
+  align-items: flex-end;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  color: orange;
 }
 
 .row-text > h1 {
-    padding-top:20px;
-    font-size:38px;
-    font-family: 'Kumbh Sans', sans-serif;
-    color:hsl(228, 3%, 29%);
-    margin-top:0;
-    letter-spacing: 0.1rem;
-    line-height:2.8rem;
+  padding-top: 20px;
+  font-size: 38px;
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(228, 3%, 29%);
+  margin-top: 0;
+  letter-spacing: 0.1rem;
+  line-height: 2.8rem;
 }
 
 .product-description {
-    font-size:16px;
-    font-family: 'Kumbh Sans', sans-serif;
-    color: hsl(219, 9%, 45%);
+  font-size: 16px;
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(219, 9%, 45%);
 }
 
 .row-price {
-    display:flex;
-    margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .discounted-price {
-    font-size:22px;
-    font-family: 'Kumbh Sans', sans-serif;
-    color: hsl(0, 0%, 2%);
-    font-weight: 700;
-    margin-right:20px;
+  font-size: 22px;
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(0, 0%, 2%);
+  font-weight: 700;
+  margin-right: 20px;
 }
 
 .percent-discount {
-background-color: rgb(250, 218, 158);
-color:orange;
-font-size: 16px;
-font-weight: 700;
-font-family: 'Kumbh Sans', sans-serif;
-padding:3px;
-width:40px;
-border-radius:15%;
+  background-color: rgb(250, 218, 158);
+  color: orange;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Kumbh Sans", sans-serif;
+  padding: 3px;
+  width: 40px;
+  border-radius: 15%;
 }
 
 #old-price {
-   font-size: 14px;
-   font-family: 'Kumbh Sans', sans-serif;
-   font-weight: bold;
-   color: hsl(225, 2%, 60%);
-    text-decoration: line-through;
+  font-size: 14px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  color: hsl(225, 2%, 60%);
+  text-decoration: line-through;
 }
 
 .row-btn-group {
-    margin-top: 50px;
-    display:flex;
-    font-size: 22px;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-weight: bold;
-    height:40px;
+  margin-top: 50px;
+  display: flex;
+  font-size: 22px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  height: 40px;
 }
 .btn-counter {
-    margin-right:5px;
-    width:25%;
-    display:flex;
-    background-color:hsl(240, 3%, 94%);
-    border-radius:8%;
-    padding-top:2px;
+  margin-right: 5px;
+  width: 25%;
+  display: flex;
+  background-color: hsl(240, 3%, 94%);
+  border-radius: 8%;
+  padding-top: 2px;
 }
 
-#btn-plus, #btn-minus {
-    width: 20%;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-    font-weight:bold;
-    font-size: 20px;
-    flex:1;
-    color:hsl(26, 100%, 55%);
+#btn-plus,
+#btn-minus {
+  width: 20%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-weight: bold;
+  font-size: 20px;
+  flex: 1;
+  color: hsl(26, 100%, 55%);
 }
 #btn-addtocart {
-    margin-left: 40px;
-    width:40%;
-    background-color: hsl(26, 100%, 55%);
-    font-size:14px;
-    font-weight: bold;
-    color:white;
-    border-radius: 8%;
-    border:0px;
-    box-shadow:0px 10px 10px -8px hsl(26, 100%, 55%);
+  margin-left: 40px;
+  width: 40%;
+  background-color: hsl(26, 100%, 55%);
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8%;
+  border: 0px;
+  box-shadow: 0px 10px 10px -8px hsl(26, 100%, 55%);
 }
-#btn-addtocart:hover{
-    cursor:pointer;
+#btn-addtocart:hover {
+  cursor: pointer;
 }
 .count {
-    padding:8px;
-    font-size: 16px;
-    font-family: 'Kumbh Sans', sans-serif;
-    
+  padding: 8px;
+  font-size: 16px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.lightbox-active-modal {
+  border: 2px solid red;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-30%);
+  width: 30%;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.btn-close {
+  float: right;
+}
+.productSlides-modal {
+  width: 100%;
+  margin-top: 40px;
+}
+.slide-container {
+  width: 80%;
+  height: 80%;
+}
+
+.row-thumbnail-modal {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+  border: 2px solid red;
+}
+.row-thumbnail-modal:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.thumbnail-modal {
+  border-radius: 20%;
+  width: 100%;
+}
+
+.thumbnail-modal:hover {
+  opacity: 0.6;
+  border: 2px solid orangered;
+}
+
+.column-modal {
+  margin: 20px 0 0 0;
+  width: 15%;
 }
